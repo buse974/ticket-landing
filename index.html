@@ -1,0 +1,970 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Byewait | File d'attente virtuelle pour professionnels</title>
+        <meta
+            name="description"
+            content="Transformez l'attente de vos clients. Ils prennent un ticket, partent, et reviennent au bon moment. Gratuit pour démarrer."
+        />
+
+        <!-- Open Graph -->
+        <meta
+            property="og:title"
+            content="Byewait | File d'attente virtuelle"
+        />
+        <meta
+            property="og:description"
+            content="Vos clients prennent un ticket à distance et reviennent pile au bon moment. Fini les files d'attente !"
+        />
+        <meta
+            property="og:image"
+            content="https://byewait.fr/assets/img/og-image.png"
+        />
+        <meta property="og:url" content="https://byewait.fr" />
+        <meta property="og:type" content="website" />
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Byewait | File d'attente virtuelle"
+        />
+        <meta
+            name="twitter:description"
+            content="Vos clients prennent un ticket à distance et reviennent pile au bon moment."
+        />
+
+        <!-- Favicon -->
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%236366f1' rx='20' width='100' height='100'/><text x='50' y='70' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>B</text></svg>"
+        />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body>
+        <!-- Floating Navigation (pill style) -->
+        <header class="floating-nav" id="nav">
+            <nav class="floating-nav__pill">
+                <a href="/" class="floating-nav__logo">
+                    <div class="floating-nav__logo-glow"></div>
+                    <div class="floating-nav__logo-icon">B</div>
+                    <span>Byewait</span>
+                </a>
+                <div class="floating-nav__divider"></div>
+                <div class="floating-nav__links">
+                    <a href="#features">Fonctionnalités</a>
+                    <a href="#pricing">Tarifs</a>
+                </div>
+                <div
+                    class="floating-nav__divider floating-nav__divider--mobile-hidden"
+                ></div>
+                <a
+                    href="https://app.byewait.fr/login"
+                    class="floating-nav__link"
+                    >Connexion</a
+                >
+                <a
+                    href="https://app.byewait.fr/register"
+                    class="floating-nav__cta"
+                    >Essai gratuit</a
+                >
+            </nav>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#features">Fonctionnalités</a>
+            <a href="#how-it-works">Comment ça marche</a>
+            <a href="#pricing">Tarifs</a>
+            <hr />
+            <a href="https://app.byewait.fr/login">Connexion</a>
+            <a href="https://app.byewait.fr/register" class="btn btn--primary"
+                >Essai gratuit</a
+            >
+        </div>
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="hero__bg">
+                <div class="hero__blob hero__blob--1"></div>
+                <div class="hero__blob hero__blob--2"></div>
+                <div class="hero__grid"></div>
+            </div>
+            <div class="hero__container">
+                <div class="hero__content">
+                    <div class="hero__badge">
+                        <span class="hero__badge-dot"></span>
+                        Nouveau : Réservation à distance
+                    </div>
+                    <h1 class="hero__title">
+                        L'attente,<br />
+                        <span class="hero__title-gradient">libérée.</span>
+                    </h1>
+                    <p class="hero__subtitle">
+                        Vos clients scannent un QR code ou réservent depuis
+                        Instagram. Ils partent et reviennent pile au bon moment.
+                        <strong>Plus de files. Plus de frustration.</strong>
+                    </p>
+                    <div class="hero__cta">
+                        <a
+                            href="https://app.byewait.fr/register"
+                            class="btn btn--primary btn--large"
+                        >
+                            Démarrer gratuitement
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                        <a href="#demo" class="btn btn--outline btn--large">
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                            >
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                            Voir la démo
+                        </a>
+                    </div>
+                    <p class="hero__note">
+                        Gratuit jusqu'à 40 clients/jour • Sans carte bancaire
+                    </p>
+                </div>
+                <div class="hero__visual">
+                    <div class="phone">
+                        <div class="phone__notch"></div>
+                        <div class="phone__screen">
+                            <div class="phone__header">
+                                <div class="phone__logo">B</div>
+                                <span>Salon Martin</span>
+                            </div>
+                            <div class="phone__number-label">
+                                Numéro en cours
+                            </div>
+                            <div class="phone__number" id="demo-number">42</div>
+                            <div class="phone__stats">
+                                <div class="phone__stat">
+                                    <span class="phone__stat-value">7</span>
+                                    <span class="phone__stat-label"
+                                        >en attente</span
+                                    >
+                                </div>
+                                <div class="phone__stat">
+                                    <span class="phone__stat-value"
+                                        >~45min</span
+                                    >
+                                    <span class="phone__stat-label"
+                                        >estimé</span
+                                    >
+                                </div>
+                            </div>
+                            <button class="phone__btn">
+                                🎫 Prendre un ticket
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero__floating hero__floating--1">📱</div>
+                    <div class="hero__floating hero__floating--2">🔔</div>
+                    <div class="hero__floating hero__floating--3">✨</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Logos / Social Proof -->
+        <section class="social-proof">
+            <div class="container">
+                <p class="social-proof__text">Partagez votre lien partout</p>
+                <div class="social-proof__logos">
+                    <div class="social-proof__logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"
+                            />
+                        </svg>
+                        Instagram
+                    </div>
+                    <div class="social-proof__logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                            />
+                        </svg>
+                        Facebook
+                    </div>
+                    <div class="social-proof__logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                            />
+                        </svg>
+                        WhatsApp
+                    </div>
+                    <div class="social-proof__logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12c6.627 0 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295l.213-3.053 5.56-5.023c.242-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.828.94z"
+                            />
+                        </svg>
+                        Telegram
+                    </div>
+                    <div class="social-proof__logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"
+                            />
+                        </svg>
+                        TikTok
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Tout ce qu'il faut pour gérer l'attente
+                    </h2>
+                    <p class="section-subtitle">
+                        Simple pour vous, agréable pour vos clients
+                    </p>
+                </div>
+                <div class="features__grid">
+                    <div class="feature">
+                        <div class="feature__icon feature__icon--purple">
+                            <svg
+                                width="28"
+                                height="28"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <rect
+                                    x="3"
+                                    y="3"
+                                    width="18"
+                                    height="18"
+                                    rx="2"
+                                />
+                                <path
+                                    d="M7 7h.01M7 12h.01M7 17h.01M12 7h5M12 12h5M12 17h5"
+                                />
+                            </svg>
+                        </div>
+                        <h3 class="feature__title">Multi-files</h3>
+                        <p class="feature__text">
+                            Créez plusieurs files : "Coupe Homme", "Coloration",
+                            "Dr. Martin"... Chacune avec son QR code et ses
+                            stats.
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon feature__icon--pink">
+                            <svg
+                                width="28"
+                                height="28"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"
+                                />
+                            </svg>
+                        </div>
+                        <h3 class="feature__title">Réservation à distance</h3>
+                        <p class="feature__text">
+                            Vos clients réservent depuis votre Instagram, Google
+                            ou WhatsApp. Ils voient le temps d'attente avant de
+                            venir.
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon feature__icon--blue">
+                            <svg
+                                width="28"
+                                height="28"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"
+                                />
+                                <path d="M13.73 21a2 2 0 01-3.46 0" />
+                            </svg>
+                        </div>
+                        <h3 class="feature__title">Notifications push</h3>
+                        <p class="feature__text">
+                            "Vous êtes le prochain !" - Vos clients sont
+                            prévenus automatiquement. Plus de no-show.
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon feature__icon--green">
+                            <svg
+                                width="28"
+                                height="28"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path d="M12 20V10M18 20V4M6 20v-4" />
+                            </svg>
+                        </div>
+                        <h3 class="feature__title">Stats en temps réel</h3>
+                        <p class="feature__text">
+                            Clients traités, temps moyen, taux d'absence, heure
+                            de fin estimée... Tout pour optimiser votre journée.
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon feature__icon--orange">
+                            <svg
+                                width="28"
+                                height="28"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <rect
+                                    x="2"
+                                    y="3"
+                                    width="20"
+                                    height="14"
+                                    rx="2"
+                                />
+                                <path d="M8 21h8M12 17v4" />
+                            </svg>
+                        </div>
+                        <h3 class="feature__title">Écran d'affichage</h3>
+                        <p class="feature__text">
+                            Affichez le numéro en cours sur une TV ou tablette.
+                            Design personnalisable avec votre logo.
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature__icon feature__icon--red">
+                            <svg
+                                width="28"
+                                height="28"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                                />
+                            </svg>
+                        </div>
+                        <h3 class="feature__title">Anti-abus intégré</h3>
+                        <p class="feature__text">
+                            Limite automatique par IP pour éviter le spam.
+                            Désactivez la réservation à distance en 1 clic si
+                            besoin.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section class="how-it-works" id="how-it-works">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Comment ça marche ?</h2>
+                    <p class="section-subtitle">3 étapes, 2 minutes de setup</p>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step__number">1</div>
+                        <div class="step__content">
+                            <h3 class="step__title">Créez votre file</h3>
+                            <p class="step__text">
+                                Inscrivez-vous gratuitement et créez votre
+                                première file d'attente. Donnez-lui un nom et
+                                c'est parti.
+                            </p>
+                        </div>
+                        <div class="step__visual">
+                            <div class="step__mockup">
+                                <div class="step__mockup-header">
+                                    Nouvelle file
+                                </div>
+                                <div class="step__mockup-input">
+                                    Coupe Homme
+                                </div>
+                                <div class="step__mockup-btn">Créer</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step step--reverse">
+                        <div class="step__number">2</div>
+                        <div class="step__content">
+                            <h3 class="step__title">Partagez le QR code</h3>
+                            <p class="step__text">
+                                Affichez-le dans votre établissement ou partagez
+                                le lien sur vos réseaux. Vos clients scannent et
+                                prennent leur ticket.
+                            </p>
+                        </div>
+                        <div class="step__visual">
+                            <div class="step__qr">
+                                <div class="step__qr-code">
+                                    <svg
+                                        viewBox="0 0 100 100"
+                                        fill="currentColor"
+                                    >
+                                        <rect
+                                            x="10"
+                                            y="10"
+                                            width="20"
+                                            height="20"
+                                        />
+                                        <rect
+                                            x="70"
+                                            y="10"
+                                            width="20"
+                                            height="20"
+                                        />
+                                        <rect
+                                            x="10"
+                                            y="70"
+                                            width="20"
+                                            height="20"
+                                        />
+                                        <rect
+                                            x="40"
+                                            y="10"
+                                            width="10"
+                                            height="10"
+                                        />
+                                        <rect
+                                            x="40"
+                                            y="40"
+                                            width="20"
+                                            height="20"
+                                        />
+                                        <rect
+                                            x="70"
+                                            y="40"
+                                            width="10"
+                                            height="10"
+                                        />
+                                        <rect
+                                            x="10"
+                                            y="40"
+                                            width="10"
+                                            height="10"
+                                        />
+                                        <rect
+                                            x="40"
+                                            y="70"
+                                            width="10"
+                                            height="10"
+                                        />
+                                        <rect
+                                            x="60"
+                                            y="70"
+                                            width="10"
+                                            height="20"
+                                        />
+                                        <rect
+                                            x="80"
+                                            y="70"
+                                            width="10"
+                                            height="10"
+                                        />
+                                    </svg>
+                                </div>
+                                <span>byewait.fr/q/abc123</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step__number">3</div>
+                        <div class="step__content">
+                            <h3 class="step__title">Gérez en temps réel</h3>
+                            <p class="step__text">
+                                Cliquez "Terminé" ou "Absent" pour passer au
+                                suivant. Vos clients sont notifiés
+                                automatiquement.
+                            </p>
+                        </div>
+                        <div class="step__visual">
+                            <div class="step__dashboard">
+                                <div class="step__dashboard-current">
+                                    <span class="step__dashboard-label"
+                                        >En cours</span
+                                    >
+                                    <span class="step__dashboard-number"
+                                        >42</span
+                                    >
+                                </div>
+                                <div class="step__dashboard-actions">
+                                    <button
+                                        class="step__dashboard-btn step__dashboard-btn--success"
+                                    >
+                                        ✓ Terminé
+                                    </button>
+                                    <button
+                                        class="step__dashboard-btn step__dashboard-btn--danger"
+                                    >
+                                        ✗ Absent
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-section__content">
+                    <div class="stats-section__text">
+                        <h2 class="stats-section__title">
+                            Des stats pour optimiser votre activité
+                        </h2>
+                        <p class="stats-section__subtitle">
+                            Visualisez en un coup d'œil comment se passe votre
+                            journée
+                        </p>
+                        <ul class="stats-section__list">
+                            <li>📊 Nombre de clients traités</li>
+                            <li>⏱️ Temps d'attente et de service moyens</li>
+                            <li>🚫 Taux d'absence (no-show)</li>
+                            <li>🕐 Estimation heure de fin</li>
+                            <li>📈 Historique et tendances (Pro)</li>
+                        </ul>
+                    </div>
+                    <div class="stats-section__visual">
+                        <div class="stats-card">
+                            <div class="stats-card__header">Aujourd'hui</div>
+                            <div class="stats-card__grid">
+                                <div class="stats-card__item">
+                                    <span class="stats-card__value">47</span>
+                                    <span class="stats-card__label"
+                                        >clients</span
+                                    >
+                                </div>
+                                <div class="stats-card__item">
+                                    <span class="stats-card__value">12min</span>
+                                    <span class="stats-card__label"
+                                        >attente moy.</span
+                                    >
+                                </div>
+                                <div class="stats-card__item">
+                                    <span class="stats-card__value">18min</span>
+                                    <span class="stats-card__label"
+                                        >service moy.</span
+                                    >
+                                </div>
+                                <div class="stats-card__item">
+                                    <span class="stats-card__value">4%</span>
+                                    <span class="stats-card__label"
+                                        >absents</span
+                                    >
+                                </div>
+                            </div>
+                            <div class="stats-card__estimate">
+                                <span>⏱️ Fin estimée</span>
+                                <strong>18h45</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Tarifs simples et transparents
+                    </h2>
+                    <p class="section-subtitle">
+                        Commencez gratuitement, évoluez quand vous voulez
+                    </p>
+                </div>
+                <div class="pricing__grid">
+                    <div class="pricing-card">
+                        <div class="pricing-card__header">
+                            <h3 class="pricing-card__name">Gratuit</h3>
+                            <div class="pricing-card__price">
+                                <span class="pricing-card__amount">0€</span>
+                                <span class="pricing-card__period"
+                                    >pour toujours</span
+                                >
+                            </div>
+                        </div>
+                        <ul class="pricing-card__features">
+                            <li class="pricing-card__feature">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                1 file d'attente
+                            </li>
+                            <li class="pricing-card__feature">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                40 tickets par jour
+                            </li>
+                            <li class="pricing-card__feature">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                QR code & lien de partage
+                            </li>
+                            <li class="pricing-card__feature">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                Notifications push
+                            </li>
+                            <li class="pricing-card__feature">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                Stats du jour
+                            </li>
+                            <li
+                                class="pricing-card__feature pricing-card__feature--disabled"
+                            >
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <line x1="18" y1="6" x2="6" y2="18" />
+                                    <line x1="6" y1="6" x2="18" y2="18" />
+                                </svg>
+                                Personnalisation avancée
+                            </li>
+                            <li
+                                class="pricing-card__feature pricing-card__feature--disabled"
+                            >
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <line x1="18" y1="6" x2="6" y2="18" />
+                                    <line x1="6" y1="6" x2="18" y2="18" />
+                                </svg>
+                                Historique stats
+                            </li>
+                        </ul>
+                        <a
+                            href="https://app.byewait.fr/register"
+                            class="btn btn--outline btn--full"
+                            >Commencer</a
+                        >
+                    </div>
+                    <div class="pricing-card pricing-card--featured">
+                        <div class="pricing-card__badge">Populaire</div>
+                        <div class="pricing-card__header">
+                            <h3 class="pricing-card__name">Pro</h3>
+                            <div class="pricing-card__price">
+                                <span class="pricing-card__amount">9€</span>
+                                <span class="pricing-card__period">/mois</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-card__features">
+                            <li class="pricing-card__feature">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                <strong>Files illimitées</strong>
+                            </li>
+                            <li class="pricing-card__feature">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                <strong>Tickets illimités</strong>
+                            </li>
+                            <li class="pricing-card__feature">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                QR code & lien de partage
+                            </li>
+                            <li class="pricing-card__feature">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                Notifications push
+                            </li>
+                            <li class="pricing-card__feature">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                Stats complètes + historique
+                            </li>
+                            <li class="pricing-card__feature">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                Logo & couleurs personnalisées
+                            </li>
+                            <li class="pricing-card__feature">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                Export CSV/PDF
+                            </li>
+                            <li class="pricing-card__feature">
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                Support prioritaire
+                            </li>
+                        </ul>
+                        <a
+                            href="https://app.byewait.fr/register?plan=pro"
+                            class="btn btn--primary btn--full"
+                            >Essai gratuit 14 jours</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases -->
+        <section class="use-cases">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Pour tous les professionnels</h2>
+                    <p class="section-subtitle">
+                        Qui reçoivent du public sans rendez-vous
+                    </p>
+                </div>
+                <div class="use-cases__grid">
+                    <div class="use-case">
+                        <span class="use-case__emoji">💇</span>
+                        <h3>Salons de coiffure</h3>
+                    </div>
+                    <div class="use-case">
+                        <span class="use-case__emoji">🏥</span>
+                        <h3>Cabinets médicaux</h3>
+                    </div>
+                    <div class="use-case">
+                        <span class="use-case__emoji">🏦</span>
+                        <h3>Banques & Assurances</h3>
+                    </div>
+                    <div class="use-case">
+                        <span class="use-case__emoji">🏛️</span>
+                        <h3>Administrations</h3>
+                    </div>
+                    <div class="use-case">
+                        <span class="use-case__emoji">🍽️</span>
+                        <h3>Restaurants</h3>
+                    </div>
+                    <div class="use-case">
+                        <span class="use-case__emoji">🛒</span>
+                        <h3>Commerces</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta__content">
+                    <h2 class="cta__title">
+                        Prêt à libérer vos clients de l'attente ?
+                    </h2>
+                    <p class="cta__text">
+                        Créez votre compte en 30 secondes. Gratuit, sans carte
+                        bancaire.
+                    </p>
+                    <a
+                        href="https://app.byewait.fr/register"
+                        class="btn btn--white btn--large"
+                    >
+                        Démarrer gratuitement
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__grid">
+                    <div class="footer__brand">
+                        <a href="/" class="footer__logo">
+                            <div class="footer__logo-icon">B</div>
+                            <span>Byewait</span>
+                        </a>
+                        <p class="footer__tagline">
+                            File d'attente virtuelle pour professionnels
+                        </p>
+                    </div>
+                    <div class="footer__links">
+                        <h4>Produit</h4>
+                        <a href="#features">Fonctionnalités</a>
+                        <a href="#pricing">Tarifs</a>
+                        <a href="#how-it-works">Comment ça marche</a>
+                    </div>
+                    <div class="footer__links">
+                        <h4>Légal</h4>
+                        <a href="/mentions-legales">Mentions légales</a>
+                        <a href="/confidentialite">Confidentialité</a>
+                        <a href="/cgv">CGV</a>
+                    </div>
+                    <div class="footer__links">
+                        <h4>Contact</h4>
+                        <a href="mailto:contact@byewait.fr"
+                            >contact@byewait.fr</a
+                        >
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p>© 2025 Byewait. Tous droits réservés.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
