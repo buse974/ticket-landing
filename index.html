@@ -40,7 +40,7 @@
         <link
             rel="icon"
             type="image/svg+xml"
-            href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%236366f1' rx='20' width='100' height='100'/><text x='50' y='70' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>B</text></svg>"
+            href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%238b5cf6' rx='20' width='100' height='100'/><text x='50' y='70' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>B</text></svg>"
         />
 
         <!-- Fonts -->
@@ -54,7 +54,7 @@
         <link rel="stylesheet" href="assets/css/style.css" />
     </head>
     <body>
-        <!-- Floating Navigation (pill style) -->
+        <!-- Floating Navigation -->
         <header class="floating-nav" id="nav">
             <nav class="floating-nav__pill">
                 <a href="/" class="floating-nav__logo">
@@ -71,58 +71,62 @@
                     class="floating-nav__divider floating-nav__divider--mobile-hidden"
                 ></div>
                 <a
-                    href="https://app.byewait.fr/login"
+                    href="https://app.qless.51.77.223.61.nip.io/login"
                     class="floating-nav__link"
                     >Connexion</a
                 >
                 <a
-                    href="https://app.byewait.fr/register"
+                    href="https://app.qless.51.77.223.61.nip.io/register"
                     class="floating-nav__cta"
                     >Essai gratuit</a
                 >
             </nav>
         </header>
 
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobile-menu">
-            <a href="#features">Fonctionnalités</a>
-            <a href="#how-it-works">Comment ça marche</a>
-            <a href="#pricing">Tarifs</a>
-            <hr />
-            <a href="https://app.byewait.fr/login">Connexion</a>
-            <a href="https://app.byewait.fr/register" class="btn btn--primary"
-                >Essai gratuit</a
-            >
-        </div>
-
         <!-- Hero -->
-        <header class="hero">
+        <section class="hero">
             <div class="hero__bg">
-                <div class="hero__blob hero__blob--1"></div>
-                <div class="hero__blob hero__blob--2"></div>
                 <div class="hero__grid"></div>
+                <div class="hero__glow hero__glow--1"></div>
+                <div class="hero__glow hero__glow--2"></div>
+                <div class="hero__particles" id="particles"></div>
             </div>
+
             <div class="hero__container">
                 <div class="hero__content">
-                    <div class="hero__badge">
-                        <span class="hero__badge-dot"></span>
-                        Nouveau : Réservation à distance
+                    <!-- Social Proof Badges -->
+                    <div class="hero__badges">
+                        <div class="hero__badge hero__badge--rating">
+                            <span class="hero__badge-stars">★★★★★</span>
+                            <span>4.9/5</span>
+                        </div>
+                        <div class="hero__badge">
+                            <span class="hero__badge-number">500+</span>
+                            <span>pros</span>
+                        </div>
+                        <div class="hero__badge">
+                            <span>🇫🇷</span>
+                            <span>Made in France</span>
+                        </div>
                     </div>
+
                     <h1 class="hero__title">
                         L'attente,<br />
                         <span class="hero__title-gradient">libérée.</span>
                     </h1>
+
                     <p class="hero__subtitle">
                         Vos clients scannent un QR code ou réservent depuis
                         Instagram. Ils partent et reviennent pile au bon moment.
                         <strong>Plus de files. Plus de frustration.</strong>
                     </p>
+
                     <div class="hero__cta">
                         <a
-                            href="https://app.byewait.fr/register"
-                            class="btn btn--primary btn--large"
+                            href="https://app.qless.51.77.223.61.nip.io/register"
+                            class="btn btn--primary btn--large btn--glow"
                         >
-                            Démarrer gratuitement
+                            <span>Démarrer gratuitement</span>
                             <svg
                                 width="20"
                                 height="20"
@@ -134,7 +138,7 @@
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg>
                         </a>
-                        <a href="#demo" class="btn btn--outline btn--large">
+                        <a href="#demo" class="btn btn--glass btn--large">
                             <svg
                                 width="20"
                                 height="20"
@@ -143,52 +147,93 @@
                             >
                                 <polygon points="5 3 19 12 5 21 5 3" />
                             </svg>
-                            Voir la démo
+                            <span>Voir la démo</span>
                         </a>
                     </div>
+
                     <p class="hero__note">
-                        Gratuit jusqu'à 40 clients/jour • Sans carte bancaire
+                        <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        Gratuit jusqu'à 40 clients/jour
+                        <span class="hero__note-divider">•</span>
+                        Sans carte bancaire
                     </p>
                 </div>
+
                 <div class="hero__visual">
                     <div class="phone">
-                        <div class="phone__notch"></div>
-                        <div class="phone__screen">
-                            <div class="phone__header">
-                                <div class="phone__logo">B</div>
-                                <span>Salon Martin</span>
-                            </div>
-                            <div class="phone__number-label">
-                                Numéro en cours
-                            </div>
-                            <div class="phone__number" id="demo-number">42</div>
-                            <div class="phone__stats">
-                                <div class="phone__stat">
-                                    <span class="phone__stat-value">7</span>
-                                    <span class="phone__stat-label"
-                                        >en attente</span
-                                    >
+                        <div class="phone__frame">
+                            <div class="phone__notch"></div>
+                            <div class="phone__screen">
+                                <div class="phone__header">
+                                    <div class="phone__logo">B</div>
+                                    <span>Salon Martin</span>
                                 </div>
-                                <div class="phone__stat">
-                                    <span class="phone__stat-value"
-                                        >~45min</span
-                                    >
-                                    <span class="phone__stat-label"
-                                        >estimé</span
-                                    >
+                                <div class="phone__content">
+                                    <div class="phone__number-label">
+                                        Numéro en cours
+                                    </div>
+                                    <div class="phone__number" id="demo-number">
+                                        42
+                                    </div>
+                                    <div class="phone__stats">
+                                        <div class="phone__stat">
+                                            <span class="phone__stat-value"
+                                                >7</span
+                                            >
+                                            <span class="phone__stat-label"
+                                                >en attente</span
+                                            >
+                                        </div>
+                                        <div class="phone__stat">
+                                            <span class="phone__stat-value"
+                                                >~15min</span
+                                            >
+                                            <span class="phone__stat-label"
+                                                >estimé</span
+                                            >
+                                        </div>
+                                    </div>
+                                    <button class="phone__btn">
+                                        <span>🎫</span> Prendre un ticket
+                                    </button>
                                 </div>
                             </div>
-                            <button class="phone__btn">
-                                🎫 Prendre un ticket
-                            </button>
+                        </div>
+                        <div class="phone__reflection"></div>
+                    </div>
+
+                    <!-- Floating Elements -->
+                    <div class="hero__floating hero__floating--notification">
+                        <div class="hero__floating-icon">🔔</div>
+                        <div class="hero__floating-text">
+                            <strong>C'est votre tour !</strong>
+                            <span>Ticket #42</span>
                         </div>
                     </div>
-                    <div class="hero__floating hero__floating--1">📱</div>
-                    <div class="hero__floating hero__floating--2">🔔</div>
-                    <div class="hero__floating hero__floating--3">✨</div>
+                    <div class="hero__floating hero__floating--qr">
+                        <svg
+                            class="hero__floating-qr"
+                            viewBox="0 0 100 100"
+                            fill="currentColor"
+                        >
+                            <rect x="10" y="10" width="25" height="25" />
+                            <rect x="65" y="10" width="25" height="25" />
+                            <rect x="10" y="65" width="25" height="25" />
+                            <rect x="40" y="40" width="20" height="20" />
+                        </svg>
+                    </div>
                 </div>
             </div>
-        </header>
+        </section>
 
         <!-- Logos / Social Proof -->
         <section class="social-proof">
@@ -222,37 +267,41 @@
                     <div class="social-proof__logo">
                         <svg viewBox="0 0 24 24" fill="currentColor">
                             <path
-                                d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12c6.627 0 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295l.213-3.053 5.56-5.023c.242-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.828.94z"
-                            />
-                        </svg>
-                        Telegram
-                    </div>
-                    <div class="social-proof__logo">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path
                                 d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"
                             />
                         </svg>
                         TikTok
                     </div>
+                    <div class="social-proof__logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03z"
+                            />
+                        </svg>
+                        Google
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Features -->
+        <!-- Features - Bento Grid -->
         <section class="features" id="features">
             <div class="container">
                 <div class="section-header">
+                    <div class="section-badge">Fonctionnalités</div>
                     <h2 class="section-title">
-                        Tout ce qu'il faut pour gérer l'attente
+                        Tout ce qu'il faut pour<br /><span class="gradient-text"
+                            >gérer l'attente</span
+                        >
                     </h2>
                     <p class="section-subtitle">
                         Simple pour vous, agréable pour vos clients
                     </p>
                 </div>
-                <div class="features__grid">
-                    <div class="feature">
-                        <div class="feature__icon feature__icon--purple">
+
+                <div class="bento-grid">
+                    <div class="bento-card bento-card--large">
+                        <div class="bento-card__icon bento-card__icon--violet">
                             <svg
                                 width="28"
                                 height="28"
@@ -273,15 +322,47 @@
                                 />
                             </svg>
                         </div>
-                        <h3 class="feature__title">Multi-files</h3>
-                        <p class="feature__text">
+                        <h3 class="bento-card__title">Multi-files d'attente</h3>
+                        <p class="bento-card__text">
                             Créez plusieurs files : "Coupe Homme", "Coloration",
                             "Dr. Martin"... Chacune avec son QR code et ses
                             stats.
                         </p>
+                        <div class="bento-card__visual">
+                            <div class="bento-card__queues">
+                                <div class="bento-card__queue">
+                                    <span
+                                        class="bento-card__queue-dot bento-card__queue-dot--green"
+                                    ></span
+                                    >Coupe Homme
+                                    <span class="bento-card__queue-count"
+                                        >5</span
+                                    >
+                                </div>
+                                <div class="bento-card__queue">
+                                    <span
+                                        class="bento-card__queue-dot bento-card__queue-dot--green"
+                                    ></span
+                                    >Coloration
+                                    <span class="bento-card__queue-count"
+                                        >3</span
+                                    >
+                                </div>
+                                <div class="bento-card__queue">
+                                    <span
+                                        class="bento-card__queue-dot bento-card__queue-dot--gray"
+                                    ></span
+                                    >Barbe
+                                    <span class="bento-card__queue-count"
+                                        >0</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="feature">
-                        <div class="feature__icon feature__icon--pink">
+
+                    <div class="bento-card">
+                        <div class="bento-card__icon bento-card__icon--pink">
                             <svg
                                 width="28"
                                 height="28"
@@ -295,15 +376,17 @@
                                 />
                             </svg>
                         </div>
-                        <h3 class="feature__title">Réservation à distance</h3>
-                        <p class="feature__text">
-                            Vos clients réservent depuis votre Instagram, Google
-                            ou WhatsApp. Ils voient le temps d'attente avant de
-                            venir.
+                        <h3 class="bento-card__title">
+                            Réservation à distance
+                        </h3>
+                        <p class="bento-card__text">
+                            Vos clients réservent depuis votre Instagram ou
+                            WhatsApp avant même d'arriver.
                         </p>
                     </div>
-                    <div class="feature">
-                        <div class="feature__icon feature__icon--blue">
+
+                    <div class="bento-card">
+                        <div class="bento-card__icon bento-card__icon--blue">
                             <svg
                                 width="28"
                                 height="28"
@@ -318,14 +401,15 @@
                                 <path d="M13.73 21a2 2 0 01-3.46 0" />
                             </svg>
                         </div>
-                        <h3 class="feature__title">Notifications push</h3>
-                        <p class="feature__text">
+                        <h3 class="bento-card__title">Notifications push</h3>
+                        <p class="bento-card__text">
                             "Vous êtes le prochain !" - Vos clients sont
-                            prévenus automatiquement. Plus de no-show.
+                            prévenus automatiquement.
                         </p>
                     </div>
-                    <div class="feature">
-                        <div class="feature__icon feature__icon--green">
+
+                    <div class="bento-card">
+                        <div class="bento-card__icon bento-card__icon--green">
                             <svg
                                 width="28"
                                 height="28"
@@ -337,14 +421,15 @@
                                 <path d="M12 20V10M18 20V4M6 20v-4" />
                             </svg>
                         </div>
-                        <h3 class="feature__title">Stats en temps réel</h3>
-                        <p class="feature__text">
-                            Clients traités, temps moyen, taux d'absence, heure
-                            de fin estimée... Tout pour optimiser votre journée.
+                        <h3 class="bento-card__title">Stats en temps réel</h3>
+                        <p class="bento-card__text">
+                            Clients traités, temps moyen, taux d'absence... Tout
+                            pour optimiser.
                         </p>
                     </div>
-                    <div class="feature">
-                        <div class="feature__icon feature__icon--orange">
+
+                    <div class="bento-card bento-card--wide">
+                        <div class="bento-card__icon bento-card__icon--orange">
                             <svg
                                 width="28"
                                 height="28"
@@ -363,14 +448,27 @@
                                 <path d="M8 21h8M12 17v4" />
                             </svg>
                         </div>
-                        <h3 class="feature__title">Écran d'affichage</h3>
-                        <p class="feature__text">
-                            Affichez le numéro en cours sur une TV ou tablette.
-                            Design personnalisable avec votre logo.
+                        <h3 class="bento-card__title">Écran d'affichage TV</h3>
+                        <p class="bento-card__text">
+                            Affichez le numéro en cours sur une TV ou tablette
+                            dans votre salle d'attente.
                         </p>
+                        <div class="bento-card__visual bento-card__visual--tv">
+                            <div class="bento-card__tv">
+                                <div class="bento-card__tv-screen">
+                                    <span class="bento-card__tv-label"
+                                        >En cours</span
+                                    >
+                                    <span class="bento-card__tv-number"
+                                        >42</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="feature">
-                        <div class="feature__icon feature__icon--red">
+
+                    <div class="bento-card">
+                        <div class="bento-card__icon bento-card__icon--red">
                             <svg
                                 width="28"
                                 height="28"
@@ -384,11 +482,10 @@
                                 />
                             </svg>
                         </div>
-                        <h3 class="feature__title">Anti-abus intégré</h3>
-                        <p class="feature__text">
+                        <h3 class="bento-card__title">Anti-abus intégré</h3>
+                        <p class="bento-card__text">
                             Limite automatique par IP pour éviter le spam.
-                            Désactivez la réservation à distance en 1 clic si
-                            besoin.
+                            Désactivez la réservation à distance en 1 clic.
                         </p>
                     </div>
                 </div>
@@ -399,143 +496,113 @@
         <section class="how-it-works" id="how-it-works">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Comment ça marche ?</h2>
-                    <p class="section-subtitle">3 étapes, 2 minutes de setup</p>
+                    <div class="section-badge">Comment ça marche</div>
+                    <h2 class="section-title">
+                        3 étapes, <span class="gradient-text">2 minutes</span>
+                    </h2>
+                    <p class="section-subtitle">Setup ultra rapide</p>
                 </div>
-                <div class="steps">
-                    <div class="step">
-                        <div class="step__number">1</div>
-                        <div class="step__content">
-                            <h3 class="step__title">Créez votre file</h3>
-                            <p class="step__text">
+
+                <div class="timeline">
+                    <div class="timeline__line"></div>
+
+                    <div class="timeline__step">
+                        <div class="timeline__number">1</div>
+                        <div class="timeline__content">
+                            <h3 class="timeline__title">Créez votre file</h3>
+                            <p class="timeline__text">
                                 Inscrivez-vous gratuitement et créez votre
-                                première file d'attente. Donnez-lui un nom et
-                                c'est parti.
+                                première file d'attente en quelques secondes.
                             </p>
                         </div>
-                        <div class="step__visual">
-                            <div class="step__mockup">
-                                <div class="step__mockup-header">
-                                    Nouvelle file
+                        <div class="timeline__visual">
+                            <div class="timeline__mockup">
+                                <div class="timeline__mockup-header">
+                                    + Nouvelle file
                                 </div>
-                                <div class="step__mockup-input">
+                                <div class="timeline__mockup-input">
                                     Coupe Homme
                                 </div>
-                                <div class="step__mockup-btn">Créer</div>
+                                <div class="timeline__mockup-btn">Créer</div>
                             </div>
                         </div>
                     </div>
-                    <div class="step step--reverse">
-                        <div class="step__number">2</div>
-                        <div class="step__content">
-                            <h3 class="step__title">Partagez le QR code</h3>
-                            <p class="step__text">
+
+                    <div class="timeline__step timeline__step--reverse">
+                        <div class="timeline__number">2</div>
+                        <div class="timeline__content">
+                            <h3 class="timeline__title">Partagez le QR code</h3>
+                            <p class="timeline__text">
                                 Affichez-le dans votre établissement ou partagez
-                                le lien sur vos réseaux. Vos clients scannent et
-                                prennent leur ticket.
+                                le lien sur vos réseaux sociaux.
                             </p>
                         </div>
-                        <div class="step__visual">
-                            <div class="step__qr">
-                                <div class="step__qr-code">
-                                    <svg
-                                        viewBox="0 0 100 100"
-                                        fill="currentColor"
-                                    >
-                                        <rect
-                                            x="10"
-                                            y="10"
-                                            width="20"
-                                            height="20"
-                                        />
-                                        <rect
-                                            x="70"
-                                            y="10"
-                                            width="20"
-                                            height="20"
-                                        />
-                                        <rect
-                                            x="10"
-                                            y="70"
-                                            width="20"
-                                            height="20"
-                                        />
-                                        <rect
-                                            x="40"
-                                            y="10"
-                                            width="10"
-                                            height="10"
-                                        />
-                                        <rect
-                                            x="40"
-                                            y="40"
-                                            width="20"
-                                            height="20"
-                                        />
-                                        <rect
-                                            x="70"
-                                            y="40"
-                                            width="10"
-                                            height="10"
-                                        />
-                                        <rect
-                                            x="10"
-                                            y="40"
-                                            width="10"
-                                            height="10"
-                                        />
-                                        <rect
-                                            x="40"
-                                            y="70"
-                                            width="10"
-                                            height="10"
-                                        />
-                                        <rect
-                                            x="60"
-                                            y="70"
-                                            width="10"
-                                            height="20"
-                                        />
-                                        <rect
-                                            x="80"
-                                            y="70"
-                                            width="10"
-                                            height="10"
-                                        />
-                                    </svg>
-                                </div>
-                                <span>byewait.fr/q/abc123</span>
+                        <div class="timeline__visual">
+                            <div class="timeline__qr">
+                                <svg viewBox="0 0 100 100" fill="currentColor">
+                                    <rect
+                                        x="10"
+                                        y="10"
+                                        width="20"
+                                        height="20"
+                                    />
+                                    <rect
+                                        x="70"
+                                        y="10"
+                                        width="20"
+                                        height="20"
+                                    />
+                                    <rect
+                                        x="10"
+                                        y="70"
+                                        width="20"
+                                        height="20"
+                                    />
+                                    <rect
+                                        x="40"
+                                        y="40"
+                                        width="20"
+                                        height="20"
+                                    />
+                                    <rect
+                                        x="70"
+                                        y="70"
+                                        width="10"
+                                        height="10"
+                                    />
+                                    <rect
+                                        x="80"
+                                        y="80"
+                                        width="10"
+                                        height="10"
+                                    />
+                                </svg>
+                                <span>byewait.fr/q/salon</span>
                             </div>
                         </div>
                     </div>
-                    <div class="step">
-                        <div class="step__number">3</div>
-                        <div class="step__content">
-                            <h3 class="step__title">Gérez en temps réel</h3>
-                            <p class="step__text">
+
+                    <div class="timeline__step">
+                        <div class="timeline__number">3</div>
+                        <div class="timeline__content">
+                            <h3 class="timeline__title">Gérez en temps réel</h3>
+                            <p class="timeline__text">
                                 Cliquez "Terminé" ou "Absent" pour passer au
                                 suivant. Vos clients sont notifiés
                                 automatiquement.
                             </p>
                         </div>
-                        <div class="step__visual">
-                            <div class="step__dashboard">
-                                <div class="step__dashboard-current">
-                                    <span class="step__dashboard-label"
-                                        >En cours</span
-                                    >
-                                    <span class="step__dashboard-number"
-                                        >42</span
-                                    >
-                                </div>
-                                <div class="step__dashboard-actions">
+                        <div class="timeline__visual">
+                            <div class="timeline__dashboard">
+                                <div class="timeline__dashboard-number">42</div>
+                                <div class="timeline__dashboard-actions">
                                     <button
-                                        class="step__dashboard-btn step__dashboard-btn--success"
+                                        class="timeline__dashboard-btn timeline__dashboard-btn--success"
                                     >
                                         ✓ Terminé
                                     </button>
                                     <button
-                                        class="step__dashboard-btn step__dashboard-btn--danger"
+                                        class="timeline__dashboard-btn timeline__dashboard-btn--danger"
                                     >
                                         ✗ Absent
                                     </button>
@@ -550,55 +617,143 @@
         <!-- Stats Section -->
         <section class="stats-section">
             <div class="container">
-                <div class="stats-section__content">
-                    <div class="stats-section__text">
-                        <h2 class="stats-section__title">
-                            Des stats pour optimiser votre activité
+                <div class="stats-section__grid">
+                    <div class="stats-section__content">
+                        <div class="section-badge">Statistiques</div>
+                        <h2 class="section-title">
+                            Des stats pour
+                            <span class="gradient-text">optimiser</span>
                         </h2>
-                        <p class="stats-section__subtitle">
+                        <p class="section-subtitle">
                             Visualisez en un coup d'œil comment se passe votre
                             journée
                         </p>
                         <ul class="stats-section__list">
-                            <li>📊 Nombre de clients traités</li>
-                            <li>⏱️ Temps d'attente et de service moyens</li>
-                            <li>🚫 Taux d'absence (no-show)</li>
-                            <li>🕐 Estimation heure de fin</li>
-                            <li>📈 Historique et tendances (Pro)</li>
+                            <li>
+                                <span class="stats-section__list-icon">📊</span>
+                                Nombre de clients traités
+                            </li>
+                            <li>
+                                <span class="stats-section__list-icon">⏱️</span>
+                                Temps d'attente et de service moyens
+                            </li>
+                            <li>
+                                <span class="stats-section__list-icon">🚫</span>
+                                Taux d'absence (no-show)
+                            </li>
+                            <li>
+                                <span class="stats-section__list-icon">🕐</span>
+                                Estimation heure de fin
+                            </li>
                         </ul>
                     </div>
                     <div class="stats-section__visual">
                         <div class="stats-card">
-                            <div class="stats-card__header">Aujourd'hui</div>
+                            <div class="stats-card__header">
+                                <span>Aujourd'hui</span>
+                                <span class="stats-card__live"
+                                    >● En direct</span
+                                >
+                            </div>
                             <div class="stats-card__grid">
                                 <div class="stats-card__item">
-                                    <span class="stats-card__value">47</span>
+                                    <span
+                                        class="stats-card__value"
+                                        data-count="47"
+                                        >0</span
+                                    >
                                     <span class="stats-card__label"
                                         >clients</span
                                     >
                                 </div>
                                 <div class="stats-card__item">
-                                    <span class="stats-card__value">12min</span>
+                                    <span class="stats-card__value"
+                                        >12<small>min</small></span
+                                    >
                                     <span class="stats-card__label"
                                         >attente moy.</span
                                     >
                                 </div>
                                 <div class="stats-card__item">
-                                    <span class="stats-card__value">18min</span>
+                                    <span class="stats-card__value"
+                                        >18<small>min</small></span
+                                    >
                                     <span class="stats-card__label"
                                         >service moy.</span
                                     >
                                 </div>
                                 <div class="stats-card__item">
-                                    <span class="stats-card__value">4%</span>
+                                    <span class="stats-card__value"
+                                        >4<small>%</small></span
+                                    >
                                     <span class="stats-card__label"
                                         >absents</span
                                     >
                                 </div>
                             </div>
-                            <div class="stats-card__estimate">
+                            <div class="stats-card__footer">
                                 <span>⏱️ Fin estimée</span>
                                 <strong>18h45</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Témoignages</div>
+                    <h2 class="section-title">
+                        Ils nous font
+                        <span class="gradient-text">confiance</span>
+                    </h2>
+                </div>
+                <div class="testimonials__grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">★★★★★</div>
+                        <p class="testimonial-card__text">
+                            "Byewait a complètement transformé notre salon. Plus
+                            de clients frustrés qui attendent debout. Ils
+                            reviennent pile au bon moment !"
+                        </p>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__avatar">M</div>
+                            <div>
+                                <strong>Marie L.</strong>
+                                <span>Salon de coiffure, Paris</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">★★★★★</div>
+                        <p class="testimonial-card__text">
+                            "Setup en 5 minutes, mes patients adorent. Ils
+                            prennent leur ticket depuis la salle d'attente et
+                            vont prendre un café tranquillement."
+                        </p>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__avatar">D</div>
+                            <div>
+                                <strong>Dr. Thomas B.</strong>
+                                <span>Médecin généraliste, Lyon</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card__stars">★★★★★</div>
+                        <p class="testimonial-card__text">
+                            "Le QR code sur notre vitrine a été un game changer.
+                            Les gens s'inscrivent depuis le trottoir et
+                            reviennent quand c'est leur tour."
+                        </p>
+                        <div class="testimonial-card__author">
+                            <div class="testimonial-card__avatar">J</div>
+                            <div>
+                                <strong>Julie R.</strong>
+                                <span>Boulangerie, Bordeaux</span>
                             </div>
                         </div>
                     </div>
@@ -610,13 +765,30 @@
         <section class="pricing" id="pricing">
             <div class="container">
                 <div class="section-header">
+                    <div class="section-badge">Tarifs</div>
                     <h2 class="section-title">
-                        Tarifs simples et transparents
+                        Simple et <span class="gradient-text">transparent</span>
                     </h2>
                     <p class="section-subtitle">
                         Commencez gratuitement, évoluez quand vous voulez
                     </p>
                 </div>
+
+                <div class="pricing__toggle">
+                    <span
+                        class="pricing__toggle-label pricing__toggle-label--active"
+                        data-period="monthly"
+                        >Mensuel</span
+                    >
+                    <button class="pricing__toggle-switch" id="pricing-toggle">
+                        <span class="pricing__toggle-knob"></span>
+                    </button>
+                    <span class="pricing__toggle-label" data-period="yearly">
+                        Annuel
+                        <span class="pricing__toggle-badge">-20%</span>
+                    </span>
+                </div>
+
                 <div class="pricing__grid">
                     <div class="pricing-card">
                         <div class="pricing-card__header">
@@ -638,9 +810,8 @@
                                     stroke="currentColor"
                                     stroke-width="2"
                                 >
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                                1 file d'attente
+                                    <polyline points="20 6 9 17 4 12" /></svg
+                                >1 file d'attente
                             </li>
                             <li class="pricing-card__feature">
                                 <svg
@@ -651,9 +822,8 @@
                                     stroke="currentColor"
                                     stroke-width="2"
                                 >
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                                40 tickets par jour
+                                    <polyline points="20 6 9 17 4 12" /></svg
+                                >40 tickets par jour
                             </li>
                             <li class="pricing-card__feature">
                                 <svg
@@ -664,9 +834,8 @@
                                     stroke="currentColor"
                                     stroke-width="2"
                                 >
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                                QR code & lien de partage
+                                    <polyline points="20 6 9 17 4 12" /></svg
+                                >QR code & lien de partage
                             </li>
                             <li class="pricing-card__feature">
                                 <svg
@@ -677,9 +846,8 @@
                                     stroke="currentColor"
                                     stroke-width="2"
                                 >
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                                Notifications push
+                                    <polyline points="20 6 9 17 4 12" /></svg
+                                >Notifications push
                             </li>
                             <li class="pricing-card__feature">
                                 <svg
@@ -690,9 +858,8 @@
                                     stroke="currentColor"
                                     stroke-width="2"
                                 >
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                                Stats du jour
+                                    <polyline points="20 6 9 17 4 12" /></svg
+                                >Stats du jour
                             </li>
                             <li
                                 class="pricing-card__feature pricing-card__feature--disabled"
@@ -706,39 +873,28 @@
                                     stroke-width="2"
                                 >
                                     <line x1="18" y1="6" x2="6" y2="18" />
-                                    <line x1="6" y1="6" x2="18" y2="18" />
-                                </svg>
-                                Personnalisation avancée
-                            </li>
-                            <li
-                                class="pricing-card__feature pricing-card__feature--disabled"
-                            >
-                                <svg
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                >
-                                    <line x1="18" y1="6" x2="6" y2="18" />
-                                    <line x1="6" y1="6" x2="18" y2="18" />
-                                </svg>
-                                Historique stats
+                                    <line x1="6" y1="6" x2="18" y2="18" /></svg
+                                >Personnalisation avancée
                             </li>
                         </ul>
                         <a
-                            href="https://app.byewait.fr/register"
+                            href="https://app.qless.51.77.223.61.nip.io/register"
                             class="btn btn--outline btn--full"
                             >Commencer</a
                         >
                     </div>
+
                     <div class="pricing-card pricing-card--featured">
                         <div class="pricing-card__badge">Populaire</div>
                         <div class="pricing-card__header">
                             <h3 class="pricing-card__name">Pro</h3>
                             <div class="pricing-card__price">
-                                <span class="pricing-card__amount">9€</span>
+                                <span
+                                    class="pricing-card__amount"
+                                    data-monthly="9"
+                                    data-yearly="7"
+                                    >9€</span
+                                >
                                 <span class="pricing-card__period">/mois</span>
                             </div>
                         </div>
@@ -752,9 +908,8 @@
                                     stroke="currentColor"
                                     stroke-width="2"
                                 >
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                                <strong>Files illimitées</strong>
+                                    <polyline points="20 6 9 17 4 12" /></svg
+                                ><strong>Files illimitées</strong>
                             </li>
                             <li class="pricing-card__feature">
                                 <svg
@@ -765,9 +920,8 @@
                                     stroke="currentColor"
                                     stroke-width="2"
                                 >
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                                <strong>Tickets illimités</strong>
+                                    <polyline points="20 6 9 17 4 12" /></svg
+                                ><strong>Tickets illimités</strong>
                             </li>
                             <li class="pricing-card__feature">
                                 <svg
@@ -778,9 +932,8 @@
                                     stroke="currentColor"
                                     stroke-width="2"
                                 >
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                                QR code & lien de partage
+                                    <polyline points="20 6 9 17 4 12" /></svg
+                                >QR code & lien de partage
                             </li>
                             <li class="pricing-card__feature">
                                 <svg
@@ -791,9 +944,8 @@
                                     stroke="currentColor"
                                     stroke-width="2"
                                 >
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                                Notifications push
+                                    <polyline points="20 6 9 17 4 12" /></svg
+                                >Notifications push
                             </li>
                             <li class="pricing-card__feature">
                                 <svg
@@ -804,9 +956,8 @@
                                     stroke="currentColor"
                                     stroke-width="2"
                                 >
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                                Stats complètes + historique
+                                    <polyline points="20 6 9 17 4 12" /></svg
+                                >Stats complètes + historique
                             </li>
                             <li class="pricing-card__feature">
                                 <svg
@@ -817,9 +968,8 @@
                                     stroke="currentColor"
                                     stroke-width="2"
                                 >
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                                Logo & couleurs personnalisées
+                                    <polyline points="20 6 9 17 4 12" /></svg
+                                >Logo & couleurs personnalisées
                             </li>
                             <li class="pricing-card__feature">
                                 <svg
@@ -830,27 +980,13 @@
                                     stroke="currentColor"
                                     stroke-width="2"
                                 >
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                                Export CSV/PDF
-                            </li>
-                            <li class="pricing-card__feature">
-                                <svg
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                >
-                                    <polyline points="20 6 9 17 4 12" />
-                                </svg>
-                                Support prioritaire
+                                    <polyline points="20 6 9 17 4 12" /></svg
+                                >Support prioritaire
                             </li>
                         </ul>
                         <a
-                            href="https://app.byewait.fr/register?plan=pro"
-                            class="btn btn--primary btn--full"
+                            href="https://app.qless.51.77.223.61.nip.io/register?plan=pro"
+                            class="btn btn--primary btn--full btn--glow"
                             >Essai gratuit 14 jours</a
                         >
                     </div>
@@ -862,7 +998,10 @@
         <section class="use-cases">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Pour tous les professionnels</h2>
+                    <h2 class="section-title">
+                        Pour tous les
+                        <span class="gradient-text">professionnels</span>
+                    </h2>
                     <p class="section-subtitle">
                         Qui reçoivent du public sans rendez-vous
                     </p>
@@ -898,17 +1037,26 @@
 
         <!-- CTA -->
         <section class="cta">
+            <div class="cta__bg">
+                <div class="cta__glow cta__glow--1"></div>
+                <div class="cta__glow cta__glow--2"></div>
+            </div>
             <div class="container">
                 <div class="cta__content">
+                    <div class="cta__badge">
+                        <span class="cta__badge-dot"></span>
+                        <span data-count="523">500+</span> pros nous font
+                        confiance
+                    </div>
                     <h2 class="cta__title">
-                        Prêt à libérer vos clients de l'attente ?
+                        Prêt à libérer vos clients<br />de l'attente ?
                     </h2>
                     <p class="cta__text">
                         Créez votre compte en 30 secondes. Gratuit, sans carte
                         bancaire.
                     </p>
                     <a
-                        href="https://app.byewait.fr/register"
+                        href="https://app.qless.51.77.223.61.nip.io/register"
                         class="btn btn--white btn--large"
                     >
                         Démarrer gratuitement
@@ -923,6 +1071,11 @@
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
                     </a>
+                    <div class="cta__trust">
+                        <span>🔒 Données sécurisées</span>
+                        <span>🇫🇷 Hébergé en France</span>
+                        <span>💬 Support réactif</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -960,7 +1113,7 @@
                     </div>
                 </div>
                 <div class="footer__bottom">
-                    <p>© 2025 Byewait. Tous droits réservés.</p>
+                    <p>© 2026 Byewait. Tous droits réservés.</p>
                 </div>
             </div>
         </footer>
