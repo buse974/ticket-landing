@@ -1095,6 +1095,22 @@ ol {
     line-height: 1.7;
 }
 
+/* Badge "Bientôt" */
+.badge-soon {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.15em 0.5em;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, var(--violet-500), var(--fuchsia-500));
+    color: #fff;
+    vertical-align: middle;
+    margin-left: 0.4em;
+}
+
 /* Bento Visual Elements */
 .bento-card__visual {
     margin-top: var(--space-6);
