@@ -6,35 +6,64 @@
         <title>Byewait | File d'attente virtuelle pour professionnels</title>
         <meta
             name="description"
-            content="Transformez l'attente de vos clients. Ils prennent un ticket, partent, et reviennent au bon moment. Gratuit pour démarrer."
+            content="Byewait est la file d'attente virtuelle pour professionnels. Vos clients scannent un QR code, prennent un ticket et reviennent au bon moment. Gratuit pour démarrer."
         />
+        <meta name="keywords" content="file d'attente virtuelle, gestion file attente, QR code ticket, salon coiffure, cabinet médical, restaurant, file attente digitale, byewait" />
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#8b5cf6" />
+        <link rel="canonical" href="https://byewait.fr/" />
 
         <!-- Open Graph -->
-        <meta
-            property="og:title"
-            content="Byewait | File d'attente virtuelle"
-        />
+        <meta property="og:title" content="Byewait — File d'attente virtuelle pour professionnels" />
         <meta
             property="og:description"
-            content="Vos clients prennent un ticket à distance et reviennent pile au bon moment. Fini les files d'attente !"
+            content="Vos clients scannent un QR code, prennent un ticket et reviennent pile au bon moment. Fini les files d'attente ! Gratuit pour démarrer."
         />
         <meta
             property="og:image"
             content="https://byewait.fr/assets/img/og-image.png"
         />
-        <meta property="og:url" content="https://byewait.fr" />
+        <meta property="og:url" content="https://byewait.fr/" />
         <meta property="og:type" content="website" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta property="og:site_name" content="Byewait" />
 
         <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image" />
-        <meta
-            name="twitter:title"
-            content="Byewait | File d'attente virtuelle"
-        />
+        <meta name="twitter:title" content="Byewait — File d'attente virtuelle pour professionnels" />
         <meta
             name="twitter:description"
-            content="Vos clients prennent un ticket à distance et reviennent pile au bon moment."
+            content="Vos clients scannent un QR code, prennent un ticket et reviennent pile au bon moment."
         />
+        <meta name="twitter:image" content="https://byewait.fr/assets/img/og-image.png" />
+
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Byewait",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "description": "File d'attente virtuelle pour professionnels. QR code, notifications push, stats en temps réel.",
+            "url": "https://byewait.fr",
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "EUR",
+                    "name": "Gratuit"
+                },
+                {
+                    "@type": "Offer",
+                    "price": "20",
+                    "priceCurrency": "EUR",
+                    "name": "Pro",
+                    "billingIncrement": "P1M"
+                }
+            ]
+        }
+        </script>
 
         <!-- Favicon -->
         <link
@@ -52,11 +81,16 @@
         />
 
         <link rel="stylesheet" href="assets/css/style.css" />
+
+        <!-- Accessibility: skip to content -->
+        <style>.skip-link{position:absolute;top:-40px;left:0;background:#8b5cf6;color:#fff;padding:8px 16px;z-index:200;border-radius:0 0 8px 0;font-weight:600;transition:top .2s}.skip-link:focus{top:0}</style>
     </head>
     <body>
+        <a href="#features" class="skip-link">Aller au contenu</a>
+
         <!-- Floating Navigation -->
         <header class="floating-nav" id="nav">
-            <nav class="floating-nav__pill">
+            <nav class="floating-nav__pill" aria-label="Navigation principale">
                 <a href="/" class="floating-nav__logo">
                     <div class="floating-nav__logo-glow"></div>
                     <div class="floating-nav__logo-icon">B</div>

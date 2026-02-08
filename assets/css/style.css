@@ -2045,3 +2045,131 @@ ol {
         transform: scale(1);
     }
 }
+
+/* ========================================
+   Mobile Responsive Fixes (< 480px)
+   ======================================== */
+
+@media (max-width: 479px) {
+    /* Nav: prevent overflow on tiny screens */
+    .floating-nav {
+        left: var(--space-4);
+        right: var(--space-4);
+        transform: none;
+    }
+
+    .floating-nav__pill {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .floating-nav__logo span {
+        display: none;
+    }
+
+    .floating-nav__divider:first-of-type {
+        display: none;
+    }
+
+    /* Hero: smaller title */
+    .hero__title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .hero__badges {
+        gap: var(--space-2);
+    }
+
+    .hero__badge {
+        font-size: var(--font-size-xs);
+        padding: var(--space-1) var(--space-2);
+    }
+
+    /* Phone mockup: scale down */
+    .phone__frame {
+        width: 240px;
+    }
+
+    .phone__number {
+        font-size: 56px;
+    }
+
+    /* Section titles */
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    /* Timeline mockups */
+    .timeline__mockup,
+    .timeline__dashboard {
+        width: 100%;
+        max-width: 240px;
+    }
+
+    /* Pricing cards: less padding */
+    .pricing-card {
+        padding: var(--space-6);
+    }
+
+    /* CTA title */
+    .cta__title {
+        font-size: var(--font-size-2xl);
+    }
+
+    /* Footer: stack all */
+    .footer__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stats card: smaller */
+    .stats-card {
+        max-width: 100%;
+    }
+
+    .stats-card__value {
+        font-size: var(--font-size-xl);
+    }
+
+    /* Use cases: single column */
+    .use-cases__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Testimonials: stack on small tablets */
+@media (max-width: 767px) {
+    .testimonials__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* Stats section: stack */
+    .stats-section__content .section-badge,
+    .stats-section__content .section-title,
+    .stats-section__content .section-subtitle {
+        text-align: center;
+    }
+
+    .stats-section__list {
+        align-items: center;
+    }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
